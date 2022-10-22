@@ -20,6 +20,7 @@ html {
   overflow-x: hidden;
   font-size: 62.5%;
   line-height: 1;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,13 +28,32 @@ body {
   overflow-x: hidden;
 }
 
+/*******************************************************************************
+Header
+********************************************************************************/
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 7rem;
   background-color: #10111f;
+  animation: revealFromTop 1.5s 1;
 }
+
+@keyframes revealFromTop {
+  from {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/*******************************************************************************
+Navbar
+********************************************************************************/
 
 .logo {
   font-size: 5rem;
@@ -77,6 +97,7 @@ body {
   display: inline-block;
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
+  animation: revealFromRight 2s 1;
 }
 
 .btnJoin {
@@ -85,6 +106,17 @@ body {
 
 .btnLog {
   color: white;
+}
+
+@keyframes revealFromRight {
+  from {
+    transform: translateX(50vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /*******************************************************************************
@@ -108,16 +140,30 @@ Hero Section
   background-color: rgba(255, 0, 51, 0.2);
   backdrop-filter: blur(2px);
   border-radius: 0 30rem 30rem 0;
+  animation: revealFromLeft 1s 1;
+}
+
+@keyframes revealFromLeft {
+  from {
+    transform: translateX(-50vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .hero--content h1 {
   color: #ff0033;
   font-size: 6rem;
+  animation: revealFromLeft 2s 1;
 }
 
 .hero--content p {
   font-size: 2rem;
   color: #d1cdcd;
+  animation: revealFromLeft 1.5s 1;
 }
 
 .more {
@@ -127,11 +173,308 @@ Hero Section
   font-weight: 200;
   display: inline-block;
   padding: 0.7rem;
-  width: 11rem;
+  align-self: flex-start;
   border: 1px solid #ff0033;
   border-radius: 0.5rem;
+  background-color: rgba(255, 0, 51, 0.2);
+  animation: revealFromLeft 1.2s 1;
 }
 
 .arrow {
   color: #ff0033;
+}
+
+/*******************************************************************************
+Input
+*******************************************************************************/
+
+.join--input {
+  width: 50rem;
+  height: 51rem;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ff0033;
+  font-size: 1.5rem;
+  border: 0.1rem solid #999;
+  border-radius: 1rem;
+  background: rgba(16, 17, 31, 0.2);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 12%;
+  left: 62%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+input {
+  padding: 1rem;
+  font-family: inherit;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  outline: 0.1rem solid #ff0033;
+  background-color: rgba(255, 0, 51, 0.2);
+}
+
+#dob {
+  align-self: flex-start;
+}
+.submit {
+  text-decoration: none;
+  color: white;
+  align-self: flex-start;
+  background-color: rgba(255, 0, 51, 0.2);
+  padding: 0.8rem 1.6rem;
+  border: 0.1rem solid #ff0033;
+  border-radius: 0.2rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 700;
+}
+
+.login--input {
+  width: 50rem;
+  height: 25rem;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ff0033;
+  font-size: 1.5rem;
+  border: 0.1rem solid #999;
+  border-radius: 1rem;
+  background: rgba(16, 17, 31, 0.2);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 12%;
+  left: 62%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.check--box {
+  align-self: flex-start;
+}
+
+/*******************************************************************************
+Input
+*******************************************************************************/
+
+.buy--now {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 20rem 5rem;
+  background-color: #10111f;
+}
+
+.buy--content--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  border-right: 0.1rem solid #ff0033;
+}
+
+.buy--content--left h3,
+.buy--content--right h3 {
+  color: #ff0033;
+  font-size: 6rem;
+  font-weight: 200;
+}
+
+.buy--content--left p {
+  color: wheat;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+
+.buy--content--left li {
+  font-size: 1.4rem;
+  color: white;
+  line-height: 1.5;
+  list-style: disc;
+}
+
+.buy--content--right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.buy--content--right input {
+  outline: none;
+  letter-spacing: 0.3rem;
+  font-size: 1.5rem;
+}
+
+.available {
+  color: #12bf5a;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.not-available {
+  color: red;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+/*******************************************************************************
+Offers
+*******************************************************************************/
+
+.offers {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 20rem 3rem;
+  background-color: #10111f;
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-right: 7rem;
+  border-right: 1px solid #ff0033;
+}
+
+.offer:last-child {
+  border: none;
+}
+
+.offer h3 {
+  color: #ff0033;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.offer li {
+  list-style: none;
+  line-height: 2.5rem;
+}
+
+.offer a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+  transition: all 0.4s;
+}
+
+.offer a:hover {
+  color: #ff0033;
+}
+
+/*******************************************************************************
+About
+*******************************************************************************/
+
+.about {
+  background-color: #10111f;
+  padding: 10rem 5rem;
+}
+
+.about h3 {
+  color: #ff0033;
+  font-size: 6rem;
+  font-weight: 200;
+}
+
+.about span {
+  color: #999;
+  font-size: 2rem;
+  display: inline-block;
+  padding: 5rem 0;
+}
+
+.about p {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  width: 50rem;
+}
+
+/*******************************************************************************
+contact
+*******************************************************************************/
+
+.contact {
+  background-color: #10111f;
+  padding: 10rem 20rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10rem;
+}
+
+.contact--input {
+  width: 51rem;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #ff0033;
+  font-size: 1.5rem;
+  border-right: 0.1rem solid #999;
+  background: rgba(16, 17, 31, 0.2);
+  backdrop-filter: blur(5px);
+  transition: all 1s;
+}
+
+textarea {
+  color: #ff0033;
+  font-size: 1.5rem;
+  border: 0.1rem solid #999;
+  border-radius: 1rem;
+  background: rgba(16, 17, 31, 0.2);
+  backdrop-filter: blur(5px);
+  padding: 1rem;
+  font-family: inherit;
+  letter-spacing: 0.15rem;
+}
+
+.social--contact h3 {
+  color: #ff0033;
+  font-size: 4rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+.social--icons {
+  font-size: 3rem;
+  display: flex;
+  gap: 1rem;
+  color: #ff0033;
+  cursor: pointer;
+}
+
+address {
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+/*******************************************************************************
+contact
+*******************************************************************************/
+
+.footer {
+  background-color: #10111f;
+  padding: 10rem 5rem;
+  color: #ff0033;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
 }

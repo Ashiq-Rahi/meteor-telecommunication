@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meteor Fastest network over the country</title>
+    <title>Meteor || Fastest network over the country</title>
     <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon" />
     <!-- ----------------------------custom css---------------------------- -->
     <link rel="stylesheet" href="style.css" />
@@ -36,20 +36,21 @@
         </svg>
         <span>meteor</span></a
       >
+      <!-- ----------------------------Nav---------------------------- -->
       <ul class="nav--links">
         <a class="nav--link" href=""
           ><ion-icon name="home-outline"></ion-icon> HOME</a
         >
-        <a class="nav--link buyNow" href=""
+        <a class="nav--link buyNow" href="#buy--now"
           ><ion-icon name="cart-outline"></ion-icon> BUY NOW</a
         >
-        <a class="nav--link" href=""
+        <a class="nav--link" href="#offer"
           ><ion-icon name="gift-outline"></ion-icon> OFFERS</a
         >
-        <a class="nav--link" href=""
+        <a class="nav--link" href="#about"
           ><ion-icon name="information-outline"></ion-icon> ABOUT US</a
         >
-        <a class="nav--link" href=""
+        <a class="nav--link" href="#contact"
           ><ion-icon name="call-outline"></ion-icon> CONTACT</a
         >
       </ul>
@@ -69,11 +70,218 @@
         <p>
           We are dedicated to the people of the country to provide better
           network along with better facilities. We offer you to join us to
-          experience something that you never have before
+          experience something that you never have experienced before.
         </p>
         <a class="more" href="">See more <span class="arrow">&rArr;</span></a>
       </div>
     </section>
+    <!-- ----------------------------Form Section---------------------------- -->
+    <section class="join--input">
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" id="fname" placeholder="Peter" required />
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" id="lname" placeholder="Parker" />
+      <label for="mail">Email</label>
+      <input type="email" name="mail" id="mail" required />
+      <label for="dob">Date Of Birth</label>
+      <input type="date" name="dob" id="dob" required />
+      <label for="pass">Choose Password</label>
+      <input type="password" name="pass" id="pass" required />
+      <label for="cpass">Confirm Password</label>
+      <input type="password" name="cpass" id="cpass" required />
+      <span
+        ><input
+          class="check--box"
+          type="checkbox"
+          name="check--box"
+          id="check--box"
+        />
+        I've read all the terms and condition</span
+      >
+      <a class="submit" href="">Submit</a>
+    </section>
+    <section class="login--input">
+      <label for="mail">Email</label>
+      <input type="email" name="mail" id="mail" />
+      <label for="pass">Password</label>
+      <input type="password" name="pass" id="pass" />
+      <span
+        ><input
+          class="check--box"
+          type="checkbox"
+          name="check--box"
+          id="check--box"
+        />
+        Remember me</span
+      >
+      <a class="submit" href="">Submit</a>
+    </section>
+    <section class="buy--now" id="buy--now">
+      <div class="buy--content--left">
+        <h3>We deliver at your door step</h3>
+        <p>
+          For the first time in Bangladesh we are delivering sim cards at your
+          place. just follow the steps and you'll join our family within a few
+          moment
+        </p>
+        <ul>
+          <li>
+            Choose your required number or you can choose a random number.
+          </li>
+          <li>
+            Select your choice of category prepaid/postpaid and click buy now.
+          </li>
+          <li>
+            at the time of delivery our agent will ask for your 2 copies
+            passport size photo, NID & Fingerprint.
+          </li>
+        </ul>
+      </div>
+      <div class="buy--content--right">
+        <h3>Choose from below</h3>
+        <p>
+          <label for="sim-no"></label>
+          <span
+            >012 <input type="tel" name="sim-no" id="sim-no" maxlength="8" />
+            <span class="available">avialable</span>
+            <span class="not-available">not avialable</span></span
+          >
+        </p>
+        <span
+          ><input
+            class="check--box"
+            type="checkbox"
+            name="check--box"
+            id="check--box"
+          />
+          Choose available</span
+        >
+        <span><input type="radio" name="pre" id="pre" /> Prepaid</span>
+        <span><input type="radio" name="pre" id="post" /> Postpaid</span>
+        <a class="submit" href="">Buy Now</a>
+      </div>
+    </section>
+    <hr />
+    <!-- ----------------------------Offer Section---------------------------- -->
+    <section class="offers" id="offer">
+      <div class="offer">
+        <h3>Bundles</h3>
+        <ul>
+          <li><a href="">100 minutes & 1GB internet (3 days)</a></li>
+          <li><a href="">200 minutes & 3GB internet (7 days)</a></li>
+          <li><a href="">300 minutes & 6GB internet (15 days)</a></li>
+          <li><a href="">400 minutes & 9GB internet (30 days)</a></li>
+          <li><a href="">500 minutes & 12GB internet (30 days)</a></li>
+          <li><a href="">600 minutes & 15GB internet (30 days)</a></li>
+        </ul>
+        <a class="more" href="">see more &RightArrow;</a>
+      </div>
+      <div class="offer">
+        <h3>Talktime</h3>
+        <ul>
+          <li><a href="">5 minutes (12 Hours)</a></li>
+          <li><a href="">50 minutes (18 Hours)</a></li>
+          <li><a href="">100 minutes (3 days)</a></li>
+          <li><a href="">250 minutes (7 days)</a></li>
+          <li><a href="">250 minutes (15 days)</a></li>
+          <li><a href="">400 minutes (30 days)</a></li>
+        </ul>
+        <a class="more" href="">see more &RightArrow;</a>
+      </div>
+      <div class="offer">
+        <h3>Internet</h3>
+        <ul>
+          <li><a href="">1 GB (12 Hours)</a></li>
+          <li><a href="">2 GB (18 Hours)</a></li>
+          <li><a href="">3 GB (3 days)</a></li>
+          <li><a href="">5 GB (7 days)</a></li>
+          <li><a href="">10 GB (15 days)</a></li>
+          <li><a href="">16 GB (30 days)</a></li>
+        </ul>
+        <a class="more" href="">see more &RightArrow;</a>
+      </div>
+      <div class="offer">
+        <h3>Exclusive</h3>
+        <ul>
+          <li><a href="">Recharge 800tk and become Silver member</a></li>
+          <li><a href="">Recharge 1800tk and become Gold member</a></li>
+          <li><a href="">Recharge 300tk and become Platinum member</a></li>
+        </ul>
+        <a class="more" href="">see more &RightArrow;</a>
+      </div>
+    </section>
+    <hr />
+    <!-- ----------------------------About Section---------------------------- -->
+    <section class="about" id="about">
+      <h3>We are devoted to bring fast and uninterrupted service for you</h3>
+      <span>meteor is a network & telecommunication service</span>
+      <p>
+        The company Meteor was founded in 2022 by Md. Ashiq Al Alam. from then
+        we are always at your service to provide easy and comfortable customer
+        satisfaction. we have more than 200 network signal reciever to make
+        communication more better and to avoid any unwanted disruption. We are
+        ready at your service 24/7.
+      </p>
+    </section>
+    <hr />
+    <!-- ----------------------------About Section---------------------------- -->
+    <section class="contact" id="contact">
+      <div class="contact--input">
+        <label for="fname">Name</label>
+        <input
+          type="text"
+          name="fname"
+          id="fname"
+          placeholder="Peter Parker"
+          required
+        />
+        <label for="mail">Email</label>
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="peterparker@hosting.com"
+          required
+        />
+        <textarea
+          rows="15"
+          cols="30"
+          placeholder="You can write your message here"
+          maxlength="1000"
+        ></textarea>
+        <a class="submit" href="">Send Message</a>
+      </div>
+      <div class="social--contact">
+        <h3>Head Office</h3>
+        <address>
+          <pre>
+Street: 5B, Block: J 
+North Concord Center 
+Gulshan-2, Dhaka
+Bangladesh
+
+Tel: 880-0000-00
+
+email: info@metortelecommunication.com
+          </pre>
+        </address>
+
+        <span class="social--icons"
+          ><ion-icon name="logo-facebook"></ion-icon
+          ><ion-icon name="logo-twitter"></ion-icon
+          ><ion-icon name="logo-discord"></ion-icon
+          ><ion-icon name="logo-instagram"></ion-icon
+          ><ion-icon name="logo-linkedin"></ion-icon
+        ></span>
+      </div>
+    </section>
+    <hr />
+    <!-- ----------------------------Footer Section---------------------------- -->
+
+    <footer class="footer">
+      2022 &copy; all rights reserved. Designed and made by Ashiq Al Alam.
+    </footer>
+
     <!-- ----------------------------IonIcon Script---------------------------- -->
     <script
       type="module"
