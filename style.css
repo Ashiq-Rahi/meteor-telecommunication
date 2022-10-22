@@ -51,6 +51,13 @@ Header
   }
 }
 
+.header.sticky {
+  width: 100%;
+  background-color: rgba(16, 17, 31, 0.5);
+  position: fixed;
+  backdrop-filter: blur(5px);
+}
+
 /*******************************************************************************
 Navbar
 ********************************************************************************/
@@ -272,6 +279,7 @@ Input
   gap: 2rem;
   padding: 20rem 5rem;
   background-color: #10111f;
+  transition: all 1s;
 }
 
 .buy--content--left {
@@ -341,6 +349,7 @@ Offers
   font-size: 1.5rem;
   padding: 20rem 3rem;
   background-color: #10111f;
+  transition: all 1s;
 }
 
 .offer {
@@ -385,6 +394,7 @@ About
 .about {
   background-color: #10111f;
   padding: 10rem 5rem;
+  transition: all 1s;
 }
 
 .about h3 {
@@ -417,6 +427,7 @@ contact
   display: flex;
   justify-content: space-evenly;
   gap: 10rem;
+  transition: all 1s;
 }
 
 .contact--input {
